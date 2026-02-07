@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <defs>
+    <filter id="riverFlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.008 0.002" numOctaves="4" seed="55" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="45" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="waterRipple">
+      <feTurbulence type="turbulence" baseFrequency="0.015 0.003" numOctaves="3" seed="22"/>
+      <feDisplacementMap in="SourceGraphic" scale="30" xChannelSelector="R" yChannelSelector="B"/>
+      <feGaussianBlur stdDeviation="1"/>
+    </filter>
+    <linearGradient id="river1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4a3020"/>
+      <stop offset="25%" stop-color="#2a6068"/>
+      <stop offset="50%" stop-color="#1a4850"/>
+      <stop offset="75%" stop-color="#3a5048"/>
+      <stop offset="100%" stop-color="#5a4030"/>
+    </linearGradient>
+    <linearGradient id="river2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#6a5040" stop-opacity="0.6"/>
+      <stop offset="30%" stop-color="#1a5560" stop-opacity="0.8"/>
+      <stop offset="70%" stop-color="#2a6570" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#5a4538" stop-opacity="0.5"/>
+    </linearGradient>
+    <linearGradient id="bank" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#3a2818"/>
+      <stop offset="50%" stop-color="#5a4028"/>
+      <stop offset="100%" stop-color="#4a3520"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#river1)"/>
+  <ellipse cx="400" cy="200" rx="600" ry="150" fill="#5a4530" filter="url(#riverFlow)"/>
+  <ellipse cx="400" cy="400" rx="650" ry="120" fill="#1a5058" filter="url(#waterRipple)"/>
+  <ellipse cx="400" cy="550" rx="700" ry="130" fill="#2a6570" filter="url(#waterRipple)"/>
+  <ellipse cx="400" cy="700" rx="650" ry="140" fill="#1a4550" filter="url(#waterRipple)"/>
+  <ellipse cx="400" cy="850" rx="600" ry="120" fill="#3a5548" filter="url(#riverFlow)"/>
+  <ellipse cx="400" cy="950" rx="550" ry="100" fill="url(#bank)" filter="url(#riverFlow)"/>
+  <ellipse cx="400" cy="100" rx="500" ry="80" fill="#6a5038" opacity="0.7" filter="url(#riverFlow)"/>
+  <rect width="800" height="1000" fill="url(#river2)" filter="url(#riverFlow)"/>
+  <ellipse cx="400" cy="500" rx="400" ry="300" fill="#4a8090" opacity="0.2" filter="url(#waterRipple)"/>
+</svg>

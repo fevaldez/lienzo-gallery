@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <defs>
+    <filter id="dappled" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.025" numOctaves="6" seed="33" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="50" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="lightSpots">
+      <feTurbulence type="turbulence" baseFrequency="0.04" numOctaves="4" seed="77" result="spots"/>
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"/>
+      <feBlend in="SourceGraphic" mode="screen"/>
+    </filter>
+    <radialGradient id="forest1" cx="30%" cy="20%" r="80%">
+      <stop offset="0%" stop-color="#c4a040"/>
+      <stop offset="40%" stop-color="#4a6030"/>
+      <stop offset="100%" stop-color="#1a2810"/>
+    </radialGradient>
+    <radialGradient id="forest2" cx="70%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#e8c860" stop-opacity="0.7"/>
+      <stop offset="50%" stop-color="#6a8040" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#2a3820" stop-opacity="0.3"/>
+    </radialGradient>
+    <radialGradient id="lightBeam" cx="50%" cy="0%" r="100%">
+      <stop offset="0%" stop-color="#fff8d0" stop-opacity="0.6"/>
+      <stop offset="30%" stop-color="#d4b040" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#3a5020" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="forestBase" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3a5028"/>
+      <stop offset="50%" stop-color="#2a4020"/>
+      <stop offset="100%" stop-color="#1a2810"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#forestBase)"/>
+  <ellipse cx="400" cy="300" rx="500" ry="400" fill="url(#forest1)" filter="url(#dappled)"/>
+  <ellipse cx="250" cy="200" rx="300" ry="350" fill="url(#lightBeam)" filter="url(#dappled)"/>
+  <ellipse cx="550" cy="400" rx="350" ry="400" fill="url(#forest2)" filter="url(#dappled)"/>
+  <ellipse cx="150" cy="600" rx="250" ry="300" fill="#2a4520" opacity="0.8" filter="url(#dappled)"/>
+  <ellipse cx="650" cy="700" rx="280" ry="350" fill="#1a3018" opacity="0.7" filter="url(#dappled)"/>
+  <ellipse cx="400" cy="150" rx="200" ry="250" fill="#d4a840" opacity="0.5" filter="url(#lightSpots)"/>
+  <ellipse cx="300" cy="450" rx="150" ry="200" fill="#e8c060" opacity="0.3" filter="url(#lightSpots)"/>
+  <ellipse cx="500" cy="350" rx="180" ry="220" fill="#c4a040" opacity="0.35" filter="url(#lightSpots)"/>
+  <rect width="800" height="1000" fill="#5a7840" opacity="0.1" filter="url(#dappled)"/>
+</svg>

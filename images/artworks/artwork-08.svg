@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <defs>
+    <filter id="earthTexture" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.009" numOctaves="5" seed="77" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="60" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="moistBlend">
+      <feGaussianBlur stdDeviation="4"/>
+      <feColorMatrix type="saturate" values="1.2"/>
+    </filter>
+    <linearGradient id="wetEarth" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2a3828"/>
+      <stop offset="30%" stop-color="#3a2818"/>
+      <stop offset="60%" stop-color="#2a2010"/>
+      <stop offset="100%" stop-color="#1a1808"/>
+    </linearGradient>
+    <radialGradient id="moss1" cx="40%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#4a6838" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#3a5028" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#2a3820" stop-opacity="0.3"/>
+    </radialGradient>
+    <radialGradient id="darkSoil" cx="60%" cy="70%" r="55%">
+      <stop offset="0%" stop-color="#3a2818" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#2a1810" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#1a1008" stop-opacity="0.4"/>
+    </radialGradient>
+    <linearGradient id="mossStreak" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#3a5830"/>
+      <stop offset="50%" stop-color="#5a7848"/>
+      <stop offset="100%" stop-color="#4a6838"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#wetEarth)"/>
+  <ellipse cx="300" cy="300" rx="400" ry="350" fill="url(#moss1)" filter="url(#earthTexture)"/>
+  <ellipse cx="550" cy="650" rx="380" ry="400" fill="url(#darkSoil)" filter="url(#earthTexture)"/>
+  <ellipse cx="150" cy="600" rx="250" ry="300" fill="#4a5838" opacity="0.7" filter="url(#earthTexture)"/>
+  <ellipse cx="700" cy="350" rx="200" ry="280" fill="#3a2010" opacity="0.8" filter="url(#earthTexture)"/>
+  <ellipse cx="400" cy="500" rx="350" ry="250" fill="url(#mossStreak)" opacity="0.5" filter="url(#moistBlend)"/>
+  <ellipse cx="200" cy="850" rx="280" ry="200" fill="#2a1808" opacity="0.9" filter="url(#earthTexture)"/>
+  <ellipse cx="600" cy="150" rx="220" ry="180" fill="#5a7040" opacity="0.6" filter="url(#earthTexture)"/>
+  <ellipse cx="450" cy="800" rx="300" ry="220" fill="#3a4828" opacity="0.65" filter="url(#moistBlend)"/>
+  <rect width="800" height="1000" fill="url(#moss1)" opacity="0.2" filter="url(#earthTexture)"/>
+</svg>

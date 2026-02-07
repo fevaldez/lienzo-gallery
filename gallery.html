@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explora la colección completa de pinturas originales sobre lienzo por Dora Lienzo. Obras únicas creadas en Monterrey.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Colección | Lienzo Gallery</title>
+</head>
+<body>
+  <a href="#main-content" class="visually-hidden">Ir al contenido principal</a>
+
+  <!-- Header -->
+  <header class="header" role="banner">
+    <div class="container">
+      <div class="header__inner">
+        <a href="index.html" class="header__logo" aria-label="Lienzo - Inicio">Lienzo<span>.</span></a>
+        <nav class="nav" role="navigation" aria-label="Navegación principal">
+          <ul class="nav__list">
+            <li><a href="index.html" class="nav__link">Inicio</a></li>
+            <li><a href="gallery.html" class="nav__link nav__link--active">Colección</a></li>
+            <li><a href="archive.html" class="nav__link">Archivo</a></li>
+            <li><a href="about.html" class="nav__link">Sobre Dora</a></li>
+            <li><a href="contact.html" class="nav__link">Contacto</a></li>
+          </ul>
+        </nav>
+        <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <nav class="mobile-nav" role="navigation" aria-label="Navegación móvil">
+    <ul class="mobile-nav__list">
+      <li class="mobile-nav__item"><a href="index.html" class="mobile-nav__link">Inicio</a></li>
+      <li class="mobile-nav__item"><a href="gallery.html" class="mobile-nav__link">Colección</a></li>
+      <li class="mobile-nav__item"><a href="archive.html" class="mobile-nav__link">Archivo</a></li>
+      <li class="mobile-nav__item"><a href="about.html" class="mobile-nav__link">Sobre Dora</a></li>
+      <li class="mobile-nav__item"><a href="contact.html" class="mobile-nav__link">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-content">
+    <!-- Gallery Header -->
+    <section class="section" style="padding-top: calc(80px + var(--space-xl));">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-header__subtitle">Obras Originales</p>
+          <h1 class="section-header__title">La Colección</h1>
+          <p class="section-header__description">Cada lienzo es una pieza única, pintada a mano en mi estudio de Monterrey. Explora la colección y encuentra la obra que hable a tu alma.</p>
+        </header>
+
+        <!-- Filters -->
+        <div class="filters" role="group" aria-label="Filtrar obras por categoría">
+          <button class="filter-btn filter-btn--active" data-filter="all">Todas</button>
+          <button class="filter-btn" data-filter="paisaje">Paisajes</button>
+          <button class="filter-btn" data-filter="abstracto">Abstracto</button>
+          <button class="filter-btn" data-filter="naturaleza">Naturaleza</button>
+        </div>
+
+        <!-- Artwork Grid -->
+        <div class="artwork-grid">
+          <!-- Artwork 1 -->
+          <article class="artwork-card" data-category="paisaje">
+            <a href="product.html" aria-label="Ver Amanecer en el Valle - $28,000 MXN">
+              <div class="artwork-card__image">
+                <img src="images/artworks/artwork-01.svg" alt="Amanecer en el Valle - Pintura de paisaje con tonos dorados del amanecer" loading="lazy">
+                <div class="artwork-card__overlay"></div>
+              </div>
+              <div class="artwork-card__info">
+                <h3 class="artwork-card__title">Amanecer en el Valle / Dawn in the Valley</h3>
+                <p class="artwork-card__meta">80 × 100 cm | Acrílico sobre lienzo</p>
+                <p class="artwork-card__price">$28,000 MXN</p>
+              </div>
+            </a>
+          </article>
+
+          <!-- Artwork 2 -->
+          <article class="artwork-card" data-category="naturaleza">
+            <a href="product.html" aria-label="Ver Lluvias de Marzo - $35,000 MXN">
+              <div class="artwork-card__image">
+                <img src="images/artworks/artwork-02.svg" alt="Lluvias de Marzo - Paisaje con tonos azules y grises de lluvia" loading="lazy">
+                <div class="artwork-card__overlay"></div>
+              </div>
+              <div class="artwork-card__info">
+                <h3 class="artwork-card__title">Lluvias de Marzo / March Rains</h3>
+                <p class="artwork-card__meta">100 × 120 cm | Técnica mixta</p>
+                <p class="artwork-card__price">$35,000 MXN</p>
+              </div>
+            </a>
+          </article>
+
+          <!-- Artwork 3 -->
+          <article class="artwork-card" data-category="naturaleza">
+            <a href="product.html" aria-label="Ver Luz entre Árboles - $42,000 MXN">
+              <div class="artwork-card__image">
+                <img src="images/artworks/artwork-03.svg" alt="Luz entre Árboles - Bosque con rayos de luz dorada" loading="lazy">
+                <div class="artwork-card__overlay"></div>
+              </div>
+              <div class="artwork-card__info">
+                <h3 class="artwork-card__title">Luz entre Árboles / Light Between Trees</h3>
+                <p class="artwork-card__meta">90 × 90 cm | Óleo sobre lienzo</p>
+                <p class="artwork-card__price">$42,000 MXN</p>
+              </div>
+            </a>
+          </article>
+
+          <!-- Artwork 4 -->
+          <article class="artwork-card" data-category="paisaje">
+            <a href="product.html" aria-label="Ver El Silencio del Río - $25,000 MXN">
+              <div class="artwork-card__image">
+                <img src="images/artworks/artwork-04.svg" alt="El Silencio del Río - Río sereno en tonos azules y verdes" loading="lazy">
+                <div class="artwork-card__overlay"></div>
+              </div>
+              <div class="artwork-card__info">
+                <h3 class="artwork-card__title">El Silencio del Río / The River's Silence</h3>
+                <p class="artwork-card__meta">70 × 100 cm | Acrílico sobre lienzo</p>
+                <p class="artwork-card__price">$25,000 MXN</p>
+              </div>
+            </a>
+          </article>
+
+          <!-- Artwork 5 -->
+          <article class="artwork-card" data-category="abstracto">
+            <a href="product.html" aria-label="Ver Tardes Doradas - $38,000 MXN">
+              <div class="artwork-card__image">
+                <img src="images/artworks/artwork-05.svg" alt="Tardes Doradas - Abstracción en tonos cálidos de atardecer" loading="lazy">
+                <div class="artwork-card__overlay"></div>
+              </div>
+              <div class="artwork-card__info">
+                <h3 class="artwork-card__title">Tardes Doradas / Golden Afternoons</h3>
+                <p class="artwork-card__meta">100 × 100 cm | Acrílico sobre lienzo</p>
+                <p class="artwork-card__price">$38,000 MXN</p>
+              </div>
+            </a>
+          </article>
+
+          <!-- Artwork 6 -->
+          <article class="artwork-card" data-category="abstracto">
+            <a href="product.html" aria-label="Ver Sombras y Memoria - $45,000 MXN">
+              <div class="artwork-card__image">
+                <img src="images/artworks/artwork-06.svg" alt="Sombras y Memoria - Composición abstracta en tonos oscuros" loading="lazy">
+                <div class="artwork-card__overlay"></div>
+              </div>
+              <div class="artwork-card__info">
+                <h3 class="artwork-card__title">Sombras y Memoria / Shadows and Memory</h3>
+                <p class="artwork-card__meta">120 × 80 cm | Óleo sobre lienzo</p>
+                <p class="artwork-card__price">$45,000 MXN</p>
+              </div>
+            </a>
+          </article>
+
+          <!-- Artwork 7 -->
+          <article class="artwork-card" data-category="paisaje">
+            <a href="product.html" aria-label="Ver Cerros del Norte - $55,000 MXN">
+              <div class="artwork-card__image">
+                <img src="images/artworks/artwork-07.svg" alt="Cerros del Norte - Montañas del norte de México al atardecer" loading="lazy">
+                <div class="artwork-card__overlay"></div>
+              </div>
+              <div class="artwork-card__info">
+                <h3 class="artwork-card__title">Cerros del Norte / Northern Hills</h3>
+                <p class="artwork-card__meta">120 × 150 cm | Óleo sobre lienzo</p>
+                <p class="artwork-card__price">$55,000 MXN</p>
+              </div>
+            </a>
+          </article>
+
+          <!-- Artwork 8 -->
+          <article class="artwork-card" data-category="abstracto">
+            <a href="product.html" aria-label="Ver Ecos del Desierto - $32,000 MXN">
+              <div class="artwork-card__image">
+                <img src="images/artworks/artwork-08.svg" alt="Ecos del Desierto - Abstracción en tonos tierra y ocre" loading="lazy">
+                <div class="artwork-card__overlay"></div>
+              </div>
+              <div class="artwork-card__info">
+                <h3 class="artwork-card__title">Ecos del Desierto / Desert Echoes</h3>
+                <p class="artwork-card__meta">80 × 80 cm | Técnica mixta</p>
+                <p class="artwork-card__price">$32,000 MXN</p>
+              </div>
+            </a>
+          </article>
+
+          <!-- Artwork 9 -->
+          <article class="artwork-card" data-category="naturaleza">
+            <a href="product.html" aria-label="Ver Hojas al Viento - $22,000 MXN">
+              <div class="artwork-card__image">
+                <img src="images/artworks/artwork-09.svg" alt="Hojas al Viento - Movimiento de hojas en tonos verdes y dorados" loading="lazy">
+                <div class="artwork-card__overlay"></div>
+              </div>
+              <div class="artwork-card__info">
+                <h3 class="artwork-card__title">Hojas al Viento / Leaves in the Wind</h3>
+                <p class="artwork-card__meta">60 × 80 cm | Acrílico sobre lienzo</p>
+                <p class="artwork-card__price">$22,000 MXN</p>
+              </div>
+            </a>
+          </article>
+
+          <!-- Artwork 10 -->
+          <article class="artwork-card" data-category="paisaje">
+            <a href="product.html" aria-label="Ver Horizonte Lejano - $70,000 MXN">
+              <div class="artwork-card__image">
+                <img src="images/artworks/artwork-10.svg" alt="Horizonte Lejano - Paisaje panorámico con horizonte extenso" loading="lazy">
+                <div class="artwork-card__overlay"></div>
+              </div>
+              <div class="artwork-card__info">
+                <h3 class="artwork-card__title">Horizonte Lejano / Distant Horizon</h3>
+                <p class="artwork-card__meta">150 × 200 cm | Óleo sobre lienzo</p>
+                <p class="artwork-card__price">$70,000 MXN</p>
+              </div>
+            </a>
+          </article>
+
+          <!-- Artwork 11 -->
+          <article class="artwork-card" data-category="abstracto">
+            <a href="product.html" aria-label="Ver Fragmentos de Luz - $18,000 MXN">
+              <div class="artwork-card__image">
+                <img src="images/artworks/artwork-11.svg" alt="Fragmentos de Luz - Pequeña abstracción con destellos luminosos" loading="lazy">
+                <div class="artwork-card__overlay"></div>
+              </div>
+              <div class="artwork-card__info">
+                <h3 class="artwork-card__title">Fragmentos de Luz / Fragments of Light</h3>
+                <p class="artwork-card__meta">50 × 50 cm | Acrílico sobre lienzo</p>
+                <p class="artwork-card__price">$18,000 MXN</p>
+              </div>
+            </a>
+          </article>
+
+          <!-- Artwork 12 -->
+          <article class="artwork-card" data-category="naturaleza">
+            <a href="product.html" aria-label="Ver Raíces Profundas - $48,000 MXN">
+              <div class="artwork-card__image">
+                <img src="images/artworks/artwork-12.svg" alt="Raíces Profundas - Árbol antiguo con raíces expuestas" loading="lazy">
+                <div class="artwork-card__overlay"></div>
+              </div>
+              <div class="artwork-card__info">
+                <h3 class="artwork-card__title">Raíces Profundas / Deep Roots</h3>
+                <p class="artwork-card__meta">100 × 130 cm | Óleo sobre lienzo</p>
+                <p class="artwork-card__price">$48,000 MXN</p>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section" style="background: var(--color-bg-alt);">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-header__title">¿Interesado en una obra?</h2>
+          <p class="section-header__description">Cada pieza es única y viene con certificado de autenticidad. Contáctame para conocer más detalles sobre disponibilidad y envío.</p>
+          <div class="mt-lg">
+            <a href="https://wa.me/528112345678" class="btn btn--whatsapp" target="_blank" rel="noopener">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              Contactar por WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <p class="footer__logo">Lienzo<span>.</span></p>
+          <p class="footer__tagline">Pinturas originales sobre lienzo desde Monterrey, creadas con pasión e intención.</p>
+        </div>
+
+        <nav class="footer__nav" aria-label="Navegación de pie de página - Galería">
+          <h4>Galería</h4>
+          <ul>
+            <li><a href="gallery.html">Colección</a></li>
+            <li><a href="archive.html">Archivo</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer__nav" aria-label="Navegación de pie de página - Información">
+          <h4>Información</h4>
+          <ul>
+            <li><a href="about.html">Sobre Dora</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer__nav" aria-label="Navegación de pie de página - Conectar">
+          <h4>Conectar</h4>
+          <ul>
+            <li><a href="https://instagram.com/lienzo" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://wa.me/528112345678" target="_blank" rel="noopener">WhatsApp</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2025 Lienzo por Dora Lienzo. Todos los derechos reservados.</p>
+        <div class="footer__social">
+          <a href="https://instagram.com/lienzo" target="_blank" rel="noopener" aria-label="Seguir en Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <a href="https://wa.me/528112345678" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

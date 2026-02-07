@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <defs>
+    <filter id="nightHaze" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.006" numOctaves="4" seed="88" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="40" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="lightGlow">
+      <feGaussianBlur stdDeviation="8"/>
+      <feColorMatrix type="matrix" values="1 0 0 0 0.1  0.8 0.6 0 0 0.05  0 0 0.5 0 0  0 0 0 1 0"/>
+    </filter>
+    <filter id="starPoint">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+    <linearGradient id="night1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a1020"/>
+      <stop offset="40%" stop-color="#101830"/>
+      <stop offset="70%" stop-color="#182040"/>
+      <stop offset="100%" stop-color="#0a0818"/>
+    </linearGradient>
+    <radialGradient id="amberLight" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f5c060" stop-opacity="0.9"/>
+      <stop offset="30%" stop-color="#d48840" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#8a4820" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="cityGlow" cx="50%" cy="100%" r="80%">
+      <stop offset="0%" stop-color="#3a3050" stop-opacity="0.5"/>
+      <stop offset="50%" stop-color="#1a1830" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#0a0818" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#night1)"/>
+  <ellipse cx="400" cy="900" rx="600" ry="300" fill="url(#cityGlow)" filter="url(#nightHaze)"/>
+  <ellipse cx="200" cy="800" rx="400" ry="200" fill="#101828" opacity="0.8" filter="url(#nightHaze)"/>
+  <ellipse cx="600" cy="850" rx="350" ry="180" fill="#0a1020" opacity="0.7" filter="url(#nightHaze)"/>
+  <ellipse cx="150" cy="750" rx="25" ry="25" fill="url(#amberLight)" filter="url(#lightGlow)"/>
+  <ellipse cx="280" cy="820" rx="20" ry="20" fill="url(#amberLight)" filter="url(#starPoint)"/>
+  <ellipse cx="420" cy="780" rx="30" ry="30" fill="url(#amberLight)" filter="url(#lightGlow)"/>
+  <ellipse cx="520" cy="850" rx="18" ry="18" fill="url(#amberLight)" filter="url(#starPoint)"/>
+  <ellipse cx="650" cy="790" rx="25" ry="25" fill="url(#amberLight)" filter="url(#lightGlow)"/>
+  <ellipse cx="720" cy="870" rx="22" ry="22" fill="url(#amberLight)" filter="url(#starPoint)"/>
+  <ellipse cx="350" cy="880" rx="15" ry="15" fill="url(#amberLight)" filter="url(#starPoint)"/>
+  <ellipse cx="580" cy="920" rx="28" ry="28" fill="url(#amberLight)" filter="url(#lightGlow)"/>
+  <ellipse cx="100" cy="850" rx="20" ry="20" fill="url(#amberLight)" filter="url(#starPoint)"/>
+  <ellipse cx="750" cy="800" rx="18" ry="18" fill="url(#amberLight)" filter="url(#starPoint)"/>
+  <ellipse cx="450" cy="950" rx="24" ry="24" fill="url(#amberLight)" filter="url(#lightGlow)"/>
+  <rect width="800" height="1000" fill="#182848" opacity="0.3" filter="url(#nightHaze)"/>
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <defs>
+    <filter id="springBloom" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="5" seed="22" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="50" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="petalSoft">
+      <feGaussianBlur stdDeviation="5"/>
+    </filter>
+    <linearGradient id="spring1" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#3a5838"/>
+      <stop offset="30%" stop-color="#5a7850"/>
+      <stop offset="60%" stop-color="#98b890"/>
+      <stop offset="100%" stop-color="#f8e8e8"/>
+    </linearGradient>
+    <radialGradient id="pinkBloom" cx="60%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#f8d0d8" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#e8b0c0" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#c890a0" stop-opacity="0.2"/>
+    </radialGradient>
+    <radialGradient id="freshGreen" cx="40%" cy="70%" r="60%">
+      <stop offset="0%" stop-color="#88c080" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#68a860" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#4a8848" stop-opacity="0.2"/>
+    </radialGradient>
+    <linearGradient id="newLeaf" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#78a870"/>
+      <stop offset="50%" stop-color="#98c890"/>
+      <stop offset="100%" stop-color="#68b860"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#spring1)"/>
+  <ellipse cx="500" cy="300" rx="400" ry="350" fill="url(#pinkBloom)" filter="url(#springBloom)"/>
+  <ellipse cx="300" cy="700" rx="450" ry="400" fill="url(#freshGreen)" filter="url(#springBloom)"/>
+  <ellipse cx="200" cy="400" rx="250" ry="300" fill="#f0c8d0" opacity="0.6" filter="url(#petalSoft)"/>
+  <ellipse cx="650" cy="550" rx="280" ry="350" fill="url(#newLeaf)" opacity="0.55" filter="url(#springBloom)"/>
+  <ellipse cx="450" cy="200" rx="300" ry="200" fill="#f8e0e8" opacity="0.7" filter="url(#petalSoft)"/>
+  <ellipse cx="150" cy="600" rx="200" ry="250" fill="#5a9850" opacity="0.65" filter="url(#springBloom)"/>
+  <ellipse cx="600" cy="800" rx="300" ry="250" fill="#78b868" opacity="0.6" filter="url(#springBloom)"/>
+  <ellipse cx="350" cy="450" rx="180" ry="220" fill="#e8c0c8" opacity="0.5" filter="url(#petalSoft)"/>
+  <ellipse cx="700" cy="250" rx="150" ry="200" fill="#f0d8e0" opacity="0.55" filter="url(#springBloom)"/>
+  <rect width="800" height="1000" fill="url(#pinkBloom)" opacity="0.1" filter="url(#springBloom)"/>
+</svg>

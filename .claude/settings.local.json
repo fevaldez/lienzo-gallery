@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -lh /Users/fvaldes/Documents/projects/claude/lienzo-gallery/*.html /Users/fvaldes/Documents/projects/claude/lienzo-gallery/css/*.css /Users/fvaldes/Documents/projects/claude/lienzo-gallery/js/*.js)",
+      "Bash(ls:*)"
+    ]
+  }
+}

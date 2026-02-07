@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <defs>
+    <filter id="overgrown" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.011" numOctaves="5" seed="33" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="55" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="softFoliage">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    <linearGradient id="garden1" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#3a4830"/>
+      <stop offset="40%" stop-color="#5a6850"/>
+      <stop offset="70%" stop-color="#8890a0"/>
+      <stop offset="100%" stop-color="#b8b0c8"/>
+    </linearGradient>
+    <radialGradient id="lavender1" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#c8b8d8" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#a898b8" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#8080a0" stop-opacity="0.2"/>
+    </radialGradient>
+    <radialGradient id="mutedGreen" cx="40%" cy="70%" r="55%">
+      <stop offset="0%" stop-color="#6a7860" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#5a6850" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#4a5840" stop-opacity="0.3"/>
+    </radialGradient>
+    <linearGradient id="vine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7a8870"/>
+      <stop offset="50%" stop-color="#9898a8"/>
+      <stop offset="100%" stop-color="#6a7860"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#garden1)"/>
+  <ellipse cx="400" cy="250" rx="450" ry="300" fill="url(#lavender1)" filter="url(#overgrown)"/>
+  <ellipse cx="300" cy="650" rx="400" ry="400" fill="url(#mutedGreen)" filter="url(#overgrown)"/>
+  <ellipse cx="600" cy="500" rx="300" ry="350" fill="url(#vine)" opacity="0.5" filter="url(#overgrown)"/>
+  <ellipse cx="150" cy="400" rx="200" ry="300" fill="#8a90a0" opacity="0.6" filter="url(#softFoliage)"/>
+  <ellipse cx="700" cy="300" rx="180" ry="250" fill="#b0a8c0" opacity="0.5" filter="url(#softFoliage)"/>
+  <ellipse cx="450" cy="800" rx="350" ry="250" fill="#4a5840" opacity="0.75" filter="url(#overgrown)"/>
+  <ellipse cx="200" cy="150" rx="250" ry="180" fill="#a8a0b8" opacity="0.55" filter="url(#overgrown)"/>
+  <ellipse cx="550" cy="750" rx="280" ry="200" fill="#5a6850" opacity="0.6" filter="url(#overgrown)"/>
+  <rect width="800" height="1000" fill="url(#lavender1)" opacity="0.15" filter="url(#overgrown)"/>
+</svg>

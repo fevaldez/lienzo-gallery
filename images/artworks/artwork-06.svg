@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <defs>
+    <filter id="shadowMist" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.005" numOctaves="5" seed="66" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="55" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="ghostly">
+      <feGaussianBlur stdDeviation="12"/>
+      <feColorMatrix type="matrix" values="0.8 0 0 0 0.1  0 0.7 0 0 0.05  0 0 0.9 0 0.1  0 0 0 0.9 0"/>
+    </filter>
+    <linearGradient id="shadow1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a1820"/>
+      <stop offset="40%" stop-color="#2a2838"/>
+      <stop offset="70%" stop-color="#3a3050"/>
+      <stop offset="100%" stop-color="#1a1520"/>
+    </linearGradient>
+    <radialGradient id="paleForm" cx="50%" cy="45%" r="45%">
+      <stop offset="0%" stop-color="#d8d0e0" stop-opacity="0.6"/>
+      <stop offset="40%" stop-color="#a8a0b8" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#4a4060" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="purple1" cx="70%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#5a4878" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#2a2040" stop-opacity="0.3"/>
+    </radialGradient>
+    <linearGradient id="charcoal" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0a0810"/>
+      <stop offset="50%" stop-color="#2a2830"/>
+      <stop offset="100%" stop-color="#1a1820"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#shadow1)"/>
+  <ellipse cx="200" cy="700" rx="400" ry="350" fill="url(#charcoal)" filter="url(#shadowMist)"/>
+  <ellipse cx="600" cy="300" rx="350" ry="400" fill="url(#purple1)" filter="url(#shadowMist)"/>
+  <ellipse cx="400" cy="450" rx="250" ry="350" fill="url(#paleForm)" filter="url(#ghostly)"/>
+  <ellipse cx="350" cy="500" rx="180" ry="280" fill="#c8c0d8" opacity="0.25" filter="url(#ghostly)"/>
+  <ellipse cx="450" cy="400" rx="150" ry="220" fill="#e0d8e8" opacity="0.2" filter="url(#ghostly)"/>
+  <ellipse cx="150" cy="200" rx="200" ry="250" fill="#3a3048" opacity="0.8" filter="url(#shadowMist)"/>
+  <ellipse cx="700" cy="800" rx="250" ry="280" fill="#2a2538" opacity="0.7" filter="url(#shadowMist)"/>
+  <ellipse cx="400" cy="850" rx="500" ry="200" fill="#0a0810" opacity="0.9" filter="url(#shadowMist)"/>
+  <rect width="800" height="1000" fill="url(#purple1)" opacity="0.2" filter="url(#shadowMist)"/>
+</svg>

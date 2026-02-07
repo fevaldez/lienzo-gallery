@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <defs>
+    <filter id="turbulence1" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.006" numOctaves="4" seed="42" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="80" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="blur1">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+    <linearGradient id="dawn1" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#1a0a00"/>
+      <stop offset="20%" stop-color="#4a1a08"/>
+      <stop offset="40%" stop-color="#c45c20"/>
+      <stop offset="60%" stop-color="#e8943a"/>
+      <stop offset="80%" stop-color="#f5c864"/>
+      <stop offset="100%" stop-color="#fff4d6"/>
+    </linearGradient>
+    <linearGradient id="dawn2" x1="0%" y1="100%" x2="20%" y2="0%">
+      <stop offset="0%" stop-color="#2d0a00" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#d4692a" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#ffeaa0" stop-opacity="0.3"/>
+    </linearGradient>
+    <radialGradient id="sunGlow" cx="50%" cy="65%" r="60%">
+      <stop offset="0%" stop-color="#fff8e0" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#f5b040" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#c45c20" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="grain1">
+      <feTurbulence type="turbulence" baseFrequency="0.5" numOctaves="3" result="grain"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feBlend in="SourceGraphic" mode="multiply"/>
+    </filter>
+  </defs>
+  <rect width="800" height="1000" fill="url(#dawn1)"/>
+  <ellipse cx="400" cy="700" rx="600" ry="400" fill="url(#dawn2)" filter="url(#turbulence1)"/>
+  <ellipse cx="400" cy="650" rx="500" ry="300" fill="url(#sunGlow)" filter="url(#blur1)"/>
+  <ellipse cx="300" cy="800" rx="400" ry="200" fill="#3a1500" opacity="0.6" filter="url(#turbulence1)"/>
+  <ellipse cx="600" cy="850" rx="350" ry="180" fill="#5a2a10" opacity="0.5" filter="url(#turbulence1)"/>
+  <path d="M0 750 Q200 680 400 720 Q600 760 800 700 L800 1000 L0 1000 Z" fill="#1a0800" opacity="0.7" filter="url(#turbulence1)"/>
+  <rect width="800" height="1000" fill="url(#dawn1)" opacity="0.1" filter="url(#grain1)"/>
+</svg>
