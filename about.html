@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Conoce a Dora Lienzo, artista mexicana basada en Monterrey especializada en pintura sobre lienzo. Descubre su historia, proceso creativo y filosofía artística.">
+  <meta name="description" content="Conoce a Dora, artista visual de Monterrey. Especializada en óleo, acrílico y técnicas mixtas sobre lienzo.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -13,7 +13,6 @@
 <body>
   <a href="#main-content" class="visually-hidden">Ir al contenido principal</a>
 
-  <!-- Header -->
   <header class="header" role="banner">
     <div class="container">
       <div class="header__inner">
@@ -22,208 +21,110 @@
           <ul class="nav__list">
             <li><a href="index.html" class="nav__link">Inicio</a></li>
             <li><a href="gallery.html" class="nav__link">Colección</a></li>
-            <li><a href="archive.html" class="nav__link">Archivo</a></li>
             <li><a href="about.html" class="nav__link nav__link--active">Sobre Dora</a></li>
             <li><a href="contact.html" class="nav__link">Contacto</a></li>
           </ul>
         </nav>
-        <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
+        <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
       </div>
     </div>
   </header>
 
-  <!-- Mobile Navigation -->
   <nav class="mobile-nav" role="navigation" aria-label="Navegación móvil">
     <ul class="mobile-nav__list">
       <li class="mobile-nav__item"><a href="index.html" class="mobile-nav__link">Inicio</a></li>
       <li class="mobile-nav__item"><a href="gallery.html" class="mobile-nav__link">Colección</a></li>
-      <li class="mobile-nav__item"><a href="archive.html" class="mobile-nav__link">Archivo</a></li>
       <li class="mobile-nav__item"><a href="about.html" class="mobile-nav__link">Sobre Dora</a></li>
       <li class="mobile-nav__item"><a href="contact.html" class="mobile-nav__link">Contacto</a></li>
     </ul>
   </nav>
 
   <main id="main-content">
-    <!-- Hero Section -->
-    <section class="about-hero section" style="padding-top: calc(80px + var(--space-xl));">
+    <section class="about-hero section">
       <div class="container">
         <div class="about-hero__grid">
           <div class="about-hero__image">
-            <img src="images/studio/artist-portrait.jpg" alt="Dora Lienzo en su estudio de Monterrey, trabajando en un lienzo">
+            <div class="placeholder-portrait" aria-label="Retrato de Dora - próximamente">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" opacity="0.3"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 10-16 0"/></svg>
+              <span>Foto de la artista próximamente</span>
+            </div>
           </div>
           <div class="about-hero__content">
-            <p class="hero__tagline">La Artista</p>
-            <h1>Dora Lienzo</h1>
-            <p>Soy una artista mexicana basada en Monterrey, especializada en pintura sobre lienzo. Mis obras exploran la luz, el silencio y la memoria de los paisajes del norte de México.</p>
-            <p>Desde pequeña, el arte fue mi forma de entender el mundo. Crecí rodeada de las montañas y cielos del noreste mexicano, y esos paisajes se convirtieron en mi mayor inspiración. Cada pintura que creo es un intento de capturar no solo lo que veo, sino lo que siento frente a la naturaleza.</p>
+            <p class="hero__tagline">Artista Visual</p>
+            <h1>Dora</h1>
+            <p style="font-size: 1.125rem; color: var(--color-text-secondary); font-style: italic; margin-bottom: var(--space-md);">Monterrey, Nuevo León, México</p>
+            <p>Dora es una artista visual basada en Monterrey, cuyo trabajo explora la relación entre la luz, el color y la memoria. Su práctica artística se centra en la pintura sobre lienzo, donde cada obra nace de una observación profunda de los paisajes y la vida cotidiana del norte de México.</p>
+            <p>Formada en las artes visuales, Dora ha desarrollado un lenguaje pictórico propio que combina técnicas tradicionales con una sensibilidad contemporánea. Sus obras capturan momentos efímeros: la luz del atardecer sobre los cerros, el silencio de un río, la calidez de una reunión entre amigas.</p>
+            <p>Desde su estudio en Monterrey, cada pieza es creada a mano con dedicación y cuidado. Dora cree que el arte debe ser accesible y significativo, por eso ofrece tanto obras originales como ediciones limitadas de calidad de museo.</p>
+            <div class="about-techniques">
+              <h3>Técnicas</h3>
+              <div class="technique-list">
+                <span class="technique-tag">Óleo sobre lienzo</span>
+                <span class="technique-tag">Acrílico</span>
+                <span class="technique-tag">Técnicas mixtas</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Story Section -->
-    <section class="section section--large" style="background: var(--color-bg-alt);">
-      <div class="container container--narrow">
-        <div class="section-header">
-          <p class="section-header__subtitle">Mi Historia</p>
-          <h2 class="section-header__title">El Camino hacia el Arte</h2>
-        </div>
-
-        <div style="display: grid; gap: var(--space-lg);">
-          <p>Mi viaje artístico comenzó formalmente cuando estudié Artes Visuales en la Universidad Autónoma de Nuevo León. Ahí descubrí que mi pasión estaba en la pintura sobre lienzo—hay algo en la textura de la tela y la forma en que absorbe el pigmento que me resulta profundamente satisfactorio.</p>
-
-          <p>Durante mis primeros años como artista, experimenté con diversos estilos y técnicas. Fue un período de exploración necesario que me llevó a encontrar mi voz. Hoy, mi trabajo se centra en paisajes abstractos que buscan transmitir la esencia emocional de un lugar más que su representación literal.</p>
-
-          <p>En 2019, establecí mi estudio en Monterrey, donde trabajo de manera independiente creando piezas únicas para coleccionistas de todo México. Cada obra que sale de mi estudio lleva consigo una parte de mi alma y una historia que contar.</p>
+    <section class="section" style="background: var(--color-bg-alt);">
+      <div class="container">
+        <div class="hero__content">
+          <div class="hero__text">
+            <p class="hero__tagline">El Estudio</p>
+            <h2>Directo del estudio</h2>
+            <p class="hero__subtitle">Cada obra es creada en mi estudio de Monterrey, donde la luz natural y los materiales de la más alta calidad se combinan para dar vida a cada pieza.</p>
+            <p style="color: var(--color-text-secondary); margin-bottom: var(--space-lg);">Trabajo con óleos y acrílicos de grado profesional sobre lienzos de algodón y lino belga. Cada pintura recibe múltiples capas y el tiempo necesario para alcanzar la profundidad y vibración que caracteriza mi trabajo.</p>
+            <a href="contact.html" class="btn btn--outline">Visita el estudio</a>
+          </div>
+          <div class="hero__image">
+            <div class="placeholder-portrait" aria-label="Foto del estudio - próximamente">
+              <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" opacity="0.3"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+              <span>Foto del estudio próximamente</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Studio Section -->
     <section class="section">
       <div class="container">
         <div class="section-header">
-          <p class="section-header__subtitle">El Espacio</p>
-          <h2 class="section-header__title">Mi Estudio</h2>
-          <p class="section-header__description">Un espacio donde la luz natural y el silencio se combinan para crear el ambiente perfecto para pintar.</p>
-        </div>
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-md);">
-          <div style="aspect-ratio: 4/3; overflow: hidden;">
-            <img src="images/studio/studio-01.jpg" alt="Vista general del estudio con lienzos en proceso" style="width: 100%; height: 100%; object-fit: cover;">
-          </div>
-          <div style="aspect-ratio: 4/3; overflow: hidden;">
-            <img src="images/studio/studio-02.jpg" alt="Detalle de paleta de colores y pinceles" style="width: 100%; height: 100%; object-fit: cover;">
-          </div>
-          <div style="aspect-ratio: 4/3; overflow: hidden;">
-            <img src="images/studio/studio-03.jpg" alt="Área de trabajo con luz natural" style="width: 100%; height: 100%; object-fit: cover;">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Process Section -->
-    <section class="section section--large" style="background: var(--color-bg-alt);">
-      <div class="container">
-        <div class="section-header">
-          <p class="section-header__subtitle">El Proceso</p>
-          <h2 class="section-header__title">Cómo Trabajo</h2>
-        </div>
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-xl); max-width: 1000px; margin: 0 auto;">
-          <!-- Step 1 -->
-          <div style="text-align: center;">
-            <div style="width: 60px; height: 60px; border-radius: 50%; background: var(--color-accent); color: white; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-md); font-family: var(--font-heading); font-size: 1.5rem;">1</div>
-            <h3 style="font-size: 1.25rem; margin-bottom: var(--space-sm);">Observación</h3>
-            <p style="font-size: 0.9375rem;">Todo comienza con la observación. Paso tiempo en la naturaleza, capturando luz, colores y sensaciones que luego traduciré al lienzo.</p>
-          </div>
-
-          <!-- Step 2 -->
-          <div style="text-align: center;">
-            <div style="width: 60px; height: 60px; border-radius: 50%; background: var(--color-accent); color: white; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-md); font-family: var(--font-heading); font-size: 1.5rem;">2</div>
-            <h3 style="font-size: 1.25rem; margin-bottom: var(--space-sm);">Composición</h3>
-            <p style="font-size: 0.9375rem;">Trabajo bocetos y estudios de color para definir la composición. Este proceso puede tomar días o semanas hasta encontrar el balance perfecto.</p>
-          </div>
-
-          <!-- Step 3 -->
-          <div style="text-align: center;">
-            <div style="width: 60px; height: 60px; border-radius: 50%; background: var(--color-accent); color: white; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-md); font-family: var(--font-heading); font-size: 1.5rem;">3</div>
-            <h3 style="font-size: 1.25rem; margin-bottom: var(--space-sm);">Creación</h3>
-            <p style="font-size: 0.9375rem;">La pintura es un diálogo entre el lienzo y yo. Construyo capas de color, dejando que la obra me guíe hasta encontrar su forma final.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Philosophy Section -->
-    <section class="section">
-      <div class="container container--narrow">
-        <div class="about-hero__grid" style="align-items: center;">
-          <div class="about-hero__content" style="order: -1;">
-            <p class="hero__tagline">Filosofía</p>
-            <h2>Lo Que Creo</h2>
-            <p>Creo que el arte tiene el poder de transformar espacios y vidas. Una pintura no es solo decoración—es una ventana a otro mundo, una invitación a sentir algo profundo.</p>
-            <p>Cada obra que creo busca establecer una conexión emocional con quien la observa. No me interesa la perfección técnica por sí misma, sino transmitir una experiencia, un momento de contemplación en medio del ruido cotidiano.</p>
-            <p>Para mí, pintar es un acto de meditación. Es mi forma de procesar el mundo y compartir mi visión con otros. Cuando alguien elige una de mis obras para su espacio, siento que esa conexión se completa.</p>
-          </div>
-          <div class="about-hero__image">
-            <img src="images/studio/artist-working.jpg" alt="Dora pintando en su estudio">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="section" style="background: var(--color-text-primary); color: var(--color-white);">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-header__title" style="color: var(--color-white);">¿Quieres Conocer Más?</h2>
-          <p class="section-header__description" style="color: rgba(255,255,255,0.8);">Explora mi colección actual o contáctame para visitar el estudio.</p>
+          <h2 class="section-header__title">¿Te gustaría conocer más?</h2>
+          <p class="section-header__description">Escríbeme para consultas sobre obras, comisiones personalizadas o visitas al estudio.</p>
           <div class="mt-lg" style="display: flex; gap: var(--space-sm); justify-content: center; flex-wrap: wrap;">
-            <a href="gallery.html" class="btn" style="background: var(--color-white); color: var(--color-text-primary);">Ver Colección</a>
-            <a href="contact.html" class="btn" style="background: transparent; border: 1px solid var(--color-white); color: var(--color-white);">Contactar</a>
+            <a href="gallery.html" class="btn btn--primary">Ver la colección</a>
+            <a href="contact.html" class="btn btn--outline">Contacto</a>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
+  <a href="https://wa.me/521XXXXXXXXXX?text=Hola,%20me%20interesa%20una%20obra" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <nav class="bottom-nav" aria-label="Navegación inferior">
+    <a href="index.html" class="bottom-nav__item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg><span>Inicio</span></a>
+    <a href="gallery.html" class="bottom-nav__item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg><span>Galería</span></a>
+    <a href="about.html" class="bottom-nav__item bottom-nav__item--active"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 10-16 0"/></svg><span>Sobre</span></a>
+    <a href="contact.html" class="bottom-nav__item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg><span>Contacto</span></a>
+  </nav>
+
   <footer class="footer" role="contentinfo">
     <div class="container">
       <div class="footer__grid">
-        <div class="footer__brand">
-          <p class="footer__logo">Lienzo<span>.</span></p>
-          <p class="footer__tagline">Pinturas originales sobre lienzo desde Monterrey, creadas con pasión e intención.</p>
-        </div>
-
-        <nav class="footer__nav" aria-label="Navegación de pie de página - Galería">
-          <h4>Galería</h4>
-          <ul>
-            <li><a href="gallery.html">Colección</a></li>
-            <li><a href="archive.html">Archivo</a></li>
-          </ul>
-        </nav>
-
-        <nav class="footer__nav" aria-label="Navegación de pie de página - Información">
-          <h4>Información</h4>
-          <ul>
-            <li><a href="about.html">Sobre Dora</a></li>
-            <li><a href="contact.html">Contacto</a></li>
-          </ul>
-        </nav>
-
-        <nav class="footer__nav" aria-label="Navegación de pie de página - Conectar">
-          <h4>Conectar</h4>
-          <ul>
-            <li><a href="https://instagram.com/lienzo" target="_blank" rel="noopener">Instagram</a></li>
-            <li><a href="https://wa.me/528112345678" target="_blank" rel="noopener">WhatsApp</a></li>
-          </ul>
-        </nav>
+        <div class="footer__brand"><p class="footer__logo">Lienzo<span>.</span></p><p class="footer__tagline">Obras originales y ediciones limitadas directamente del estudio en Monterrey.</p></div>
+        <nav class="footer__nav"><h4>Galería</h4><ul><li><a href="gallery.html">Colección</a></li></ul></nav>
+        <nav class="footer__nav"><h4>Información</h4><ul><li><a href="about.html">Sobre Dora</a></li><li><a href="contact.html">Contacto</a></li></ul></nav>
+        <nav class="footer__nav"><h4>Conectar</h4><ul><li><a href="https://wa.me/521XXXXXXXXXX" target="_blank" rel="noopener">WhatsApp</a></li></ul></nav>
       </div>
-
-      <div class="footer__bottom">
-        <p class="footer__copyright">&copy; 2025 Lienzo por Dora Lienzo. Todos los derechos reservados.</p>
-        <div class="footer__social">
-          <a href="https://instagram.com/lienzo" target="_blank" rel="noopener" aria-label="Seguir en Instagram">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-            </svg>
-          </a>
-          <a href="https://wa.me/528112345678" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-            </svg>
-          </a>
-        </div>
-      </div>
+      <div class="footer__bottom"><p class="footer__copyright">&copy; 2026 Lienzo por Dora. Todos los derechos reservados.</p></div>
     </div>
   </footer>
-
   <script src="js/main.js" defer></script>
 </body>
 </html>
