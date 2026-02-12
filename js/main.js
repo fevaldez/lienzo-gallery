@@ -394,15 +394,20 @@
     const elements = document.querySelectorAll('.artwork-card, .section-header, .about-hero__image, .about-hero__content, .value-card, .trust-badge');
     if (!elements.length) return;
 
+    // Only animate elements below the fold to avoid hiding LCP content
+    const viewportHeight = window.innerHeight;
     elements.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < viewportHeight) return; // already visible, skip
       el.style.opacity = '0';
       el.style.transform = 'translateY(20px)';
       el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      el.dataset.animate = 'true';
     });
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && entry.target.dataset.animate) {
           entry.target.style.opacity = '1';
           entry.target.style.transform = 'translateY(0)';
           observer.unobserve(entry.target);
@@ -410,7 +415,9 @@
       });
     }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-    elements.forEach(el => observer.observe(el));
+    elements.forEach(el => {
+      if (el.dataset.animate) observer.observe(el);
+    });
   }
 
   // Keyboard Navigation
