@@ -26,9 +26,9 @@ lienzo-gallery/
 ├── about.html               # Biografía de la artista
 ├── contact.html             # Formulario de contacto y WhatsApp
 ├── product-01.html          # Las Chismosas ($48,500 MXN)
-├── product-02.html          # Composición II ($35,000 MXN)
-├── product-03.html          # Naturaleza Viva ($55,000 MXN)
-├── product-04.html          # Reflejos del Norte ($42,000 MXN)
+├── product-02.html          # El Cerro de la Silla en 1800 ($35,000 MXN)
+├── product-03.html          # Cargando Flores Hacia el Mercado ($55,000 MXN)
+├── product-04.html          # En el Patio de Mi Abuela ($42,000 MXN)
 ├── css/styles.css           # Estilos completos (CSS custom properties)
 ├── js/main.js               # JavaScript (tabs, filtros, modales, zoom)
 ├── images/artworks/         # JPGs optimizados + SVG placeholders
