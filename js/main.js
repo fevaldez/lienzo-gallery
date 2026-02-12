@@ -253,15 +253,17 @@
 
   // Image Zoom Modal
   function setupImageZoom() {
-    const zoomTrigger = document.querySelector('.product__main-image');
+    const zoomTrigger = document.querySelector('.product__zoom-trigger');
     const zoomModal = document.getElementById('zoom-modal');
     if (!zoomTrigger || !zoomModal) return;
 
     const zoomImg = zoomModal.querySelector('img');
-    const mainImg = zoomTrigger.querySelector('img');
 
     zoomTrigger.addEventListener('click', () => {
-      if (zoomImg && mainImg) zoomImg.src = mainImg.src;
+      if (zoomImg) {
+        zoomImg.src = zoomTrigger.currentSrc || zoomTrigger.src;
+        zoomImg.alt = zoomTrigger.alt;
+      }
       zoomModal.classList.add('zoom-modal--active');
       document.body.style.overflow = 'hidden';
     });
