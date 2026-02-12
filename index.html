@@ -4,13 +4,67 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Lienzo Gallery - Arte original de Monterrey por Dora. Obras únicas y ediciones limitadas con calidad de museo directamente del estudio.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:site_name" content="Lienzo Gallery">
+  <meta property="og:title" content="Lienzo | Arte Original de Monterrey por Dora">
+  <meta property="og:description" content="Lienzo Gallery - Arte original de Monterrey por Dora. Obras únicas y ediciones limitadas con calidad de museo directamente del estudio.">
+  <meta property="og:url" content="https://fevaldez.github.io/lienzo-gallery/">
+  <meta property="og:image" content="https://fevaldez.github.io/lienzo-gallery/images/artworks/artwork-01.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Lienzo | Arte Original de Monterrey por Dora">
+  <meta name="twitter:description" content="Lienzo Gallery - Arte original de Monterrey por Dora. Obras únicas y ediciones limitadas con calidad de museo directamente del estudio.">
+  <meta name="twitter:image" content="https://fevaldez.github.io/lienzo-gallery/images/artworks/artwork-01.jpg">
+  <link rel="canonical" href="https://fevaldez.github.io/lienzo-gallery/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="dns-prefetch" href="https://wa.me">
+  <link rel="preload" as="image" href="images/artworks/artwork-01.webp" type="image/webp">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{--color-bg:#FAFAF8;--color-bg-alt:#F5F5F3;--color-text-primary:#2A2A2A;--color-text-secondary:#666;--color-accent:#8B6F47;--color-accent-hover:#7A6040;--color-border:#E5E5E3;--color-white:#FFF;--color-success:#2D8B4E;--color-whatsapp:#25D366;--font-heading:'Cormorant Garamond',Georgia,serif;--font-body:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;--space-xs:.5rem;--space-sm:1rem;--space-md:1.5rem;--space-lg:2rem;--space-xl:3rem;--space-2xl:5rem;--space-3xl:8rem;--container-max:1400px;--container-narrow:900px;--transition-fast:150ms ease;--transition-base:300ms ease;--transition-slow:500ms ease}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{font-size:16px;scroll-behavior:smooth}body{font-family:var(--font-body);font-size:1rem;line-height:1.6;color:var(--color-text-primary);background-color:var(--color-bg);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;padding-bottom:0}img{max-width:100%;height:auto;display:block}a{color:inherit;text-decoration:none;transition:color var(--transition-fast)}button{font-family:inherit;cursor:pointer;border:none;background:none}ul,ol{list-style:none}
+    h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:400;line-height:1.2;color:var(--color-text-primary)}h1{font-size:clamp(2.5rem,5vw,4rem)}p{color:var(--color-text-secondary);max-width:65ch}
+    .container{width:100%;max-width:var(--container-max);margin:0 auto;padding:0 var(--space-md)}.section{padding:var(--space-2xl) 0}
+    .header{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--color-bg);border-bottom:1px solid var(--color-border);transition:transform var(--transition-base),box-shadow var(--transition-base)}.header__inner{display:flex;justify-content:space-between;align-items:center;height:80px}.header__logo{font-family:var(--font-heading);font-size:1.75rem;font-weight:500;letter-spacing:.02em}.header__logo span{color:var(--color-accent)}
+    .nav{display:none}.nav__list{display:flex;gap:var(--space-lg)}.nav__link{font-size:.875rem;letter-spacing:.05em;text-transform:uppercase;position:relative}
+    .menu-toggle{display:flex;flex-direction:column;justify-content:center;gap:6px;width:28px;height:28px;z-index:1001}.menu-toggle span{display:block;width:100%;height:1.5px;background:var(--color-text-primary);transition:transform var(--transition-base),opacity var(--transition-base)}
+    .mobile-nav{position:fixed;top:0;left:0;right:0;bottom:0;background:var(--color-bg);z-index:999;display:flex;flex-direction:column;justify-content:center;align-items:center;opacity:0;visibility:hidden;transition:opacity var(--transition-base),visibility var(--transition-base)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--space-xs);padding:1rem 2rem;font-size:.875rem;font-weight:500;letter-spacing:.05em;text-transform:uppercase;border-radius:0;transition:all var(--transition-base)}.btn--primary{background:var(--color-text-primary);color:var(--color-white)}.btn--outline{background:transparent;border:1px solid var(--color-text-primary);color:var(--color-text-primary)}.btn--outline-light{border-color:var(--color-white);color:var(--color-white)}
+    .visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+    .hero{min-height:100vh;min-height:-webkit-fill-available;display:flex;align-items:center;padding-top:80px;position:relative;overflow:hidden}.hero__bg{position:absolute;top:0;left:0;width:100%;height:100%;background-size:cover;background-position:center;background-repeat:no-repeat;background-attachment:scroll;-webkit-transform:translateZ(0);transform:translateZ(0)}.hero__bg img{width:100%;height:100%;object-fit:cover;object-position:center}.hero__overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,rgba(42,42,42,.7) 0%,rgba(42,42,42,.4) 100%)}.hero__content{display:grid;gap:var(--space-xl);align-items:center;position:relative;z-index:1}.hero__content--centered{justify-items:center}.hero__text{text-align:center}.hero__text--overlay{color:var(--color-white)}.hero__text--overlay h1,.hero__text--overlay h2{color:var(--color-white)}.hero__text--overlay p{color:rgba(255,255,255,.9)}.hero__text--overlay .hero__tagline{color:rgba(255,255,255,.8)}.hero__tagline{font-size:.875rem;letter-spacing:.15em;text-transform:uppercase;color:var(--color-accent);margin-bottom:var(--space-sm)}.hero__title{margin-bottom:var(--space-md)}.hero__subtitle{font-size:1.125rem;margin-bottom:var(--space-lg);margin-left:auto;margin-right:auto}.hero__actions{display:flex;gap:var(--space-sm);justify-content:center;flex-wrap:wrap}
+    @media(max-width:639px){body{padding-bottom:60px}.hero{min-height:80vh;min-height:-webkit-fill-available}}
+    @media(min-width:768px){.nav{display:block}.menu-toggle{display:none}.hero__content--centered{grid-template-columns:1fr}.hero__text--overlay{text-align:center}}
+  </style>
+  <link rel="stylesheet" href="css/styles.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="css/styles.css"></noscript>
 
   <title>Lienzo | Arte Original de Monterrey por Dora</title>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ArtGallery",
+    "name": "Lienzo Gallery",
+    "description": "Arte original de Monterrey por Dora. Obras únicas y ediciones limitadas con calidad de museo.",
+    "url": "https://fevaldez.github.io/lienzo-gallery/",
+    "image": "https://fevaldez.github.io/lienzo-gallery/images/artworks/artwork-01.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Monterrey",
+      "addressRegion": "Nuevo León",
+      "addressCountry": "MX"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Dora Martínez"
+    }
+  }
+  </script>
 </head>
 <body>
   <a href="#main-content" class="visually-hidden">Ir al contenido principal</a>
@@ -48,7 +102,12 @@
   <main id="main-content">
     <!-- Hero Section -->
     <section class="hero section" aria-labelledby="hero-title">
-      <div class="hero__bg" style="background-image: url('images/artworks/artwork-01.jpg');"></div>
+      <div class="hero__bg">
+        <picture>
+          <source srcset="images/artworks/artwork-01.webp" type="image/webp">
+          <img src="images/artworks/artwork-01.jpg" alt="" fetchpriority="high" width="841" height="658">
+        </picture>
+      </div>
       <div class="hero__overlay"></div>
       <div class="container">
         <div class="hero__content hero__content--centered">
@@ -108,7 +167,10 @@
             <a href="product-01.html" aria-label="Ver Las Chismosas">
               <div class="artwork-card__image">
                 <span class="artwork-card__status artwork-card__status--available"></span>
-                <img src="images/artworks/artwork-01.jpg" alt="Las Chismosas - Obra original por Dora" loading="lazy">
+                <picture>
+                  <source srcset="images/artworks/artwork-01.webp" type="image/webp">
+                  <img src="images/artworks/artwork-01.jpg" alt="Las Chismosas - Obra original por Dora" loading="lazy" decoding="async" width="841" height="658">
+                </picture>
                 <div class="artwork-card__overlay">
                   <span class="artwork-card__overlay-price">Original: $48,500 MXN</span>
                   <span class="artwork-card__overlay-prints">Prints desde: $850 MXN</span>
@@ -127,7 +189,10 @@
             <a href="product-02.html" aria-label="Ver El Cerro de la Silla en 1800">
               <div class="artwork-card__image">
                 <span class="artwork-card__status artwork-card__status--available"></span>
-                <img src="images/artworks/artwork-02.jpg" alt="El Cerro de la Silla en 1800 - Obra original por Dora" loading="lazy">
+                <picture>
+                  <source srcset="images/artworks/artwork-02.webp" type="image/webp">
+                  <img src="images/artworks/artwork-02.jpg" alt="El Cerro de la Silla en 1800 - Obra original por Dora" loading="lazy" decoding="async" width="1115" height="719">
+                </picture>
                 <div class="artwork-card__overlay">
                   <span class="artwork-card__overlay-price">Original: $35,000 MXN</span>
                   <span class="artwork-card__overlay-prints">Prints desde: $850 MXN</span>
@@ -146,7 +211,10 @@
             <a href="product-03.html" aria-label="Ver Cargando Flores Hacia el Mercado">
               <div class="artwork-card__image">
                 <span class="artwork-card__status artwork-card__status--available"></span>
-                <img src="images/artworks/artwork-03.jpg" alt="Cargando Flores Hacia el Mercado - Obra original por Dora" loading="lazy">
+                <picture>
+                  <source srcset="images/artworks/artwork-03.webp" type="image/webp">
+                  <img src="images/artworks/artwork-03.jpg" alt="Cargando Flores Hacia el Mercado - Obra original por Dora" loading="lazy" decoding="async" width="1200" height="1699">
+                </picture>
                 <div class="artwork-card__overlay">
                   <span class="artwork-card__overlay-price">Original: $55,000 MXN</span>
                   <span class="artwork-card__overlay-prints">Prints desde: $850 MXN</span>
@@ -165,7 +233,10 @@
             <a href="product-04.html" aria-label="Ver En el Patio de Mi Abuela">
               <div class="artwork-card__image">
                 <span class="artwork-card__status artwork-card__status--available"></span>
-                <img src="images/artworks/artwork-04.jpg" alt="En el Patio de Mi Abuela - Obra original por Dora" loading="lazy">
+                <picture>
+                  <source srcset="images/artworks/artwork-04.webp" type="image/webp">
+                  <img src="images/artworks/artwork-04.jpg" alt="En el Patio de Mi Abuela - Obra original por Dora" loading="lazy" decoding="async" width="1200" height="1514">
+                </picture>
                 <div class="artwork-card__overlay">
                   <span class="artwork-card__overlay-price">Original: $42,000 MXN</span>
                   <span class="artwork-card__overlay-prints">Prints desde: $850 MXN</span>

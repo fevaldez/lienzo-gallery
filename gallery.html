@@ -4,10 +4,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Explora la colección completa de obras originales y ediciones limitadas por Dora. Pinturas únicas creadas en Monterrey.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:site_name" content="Lienzo Gallery">
+  <meta property="og:title" content="Colección | Lienzo Gallery">
+  <meta property="og:description" content="Explora la colección completa de obras originales y ediciones limitadas por Dora. Pinturas únicas creadas en Monterrey.">
+  <meta property="og:url" content="https://fevaldez.github.io/lienzo-gallery/gallery.html">
+  <meta property="og:image" content="https://fevaldez.github.io/lienzo-gallery/images/artworks/artwork-01.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Colección | Lienzo Gallery">
+  <meta name="twitter:description" content="Explora la colección completa de obras originales y ediciones limitadas por Dora. Pinturas únicas creadas en Monterrey.">
+  <meta name="twitter:image" content="https://fevaldez.github.io/lienzo-gallery/images/artworks/artwork-01.jpg">
+  <link rel="canonical" href="https://fevaldez.github.io/lienzo-gallery/gallery.html">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="dns-prefetch" href="https://wa.me">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{--color-bg:#FAFAF8;--color-bg-alt:#F5F5F3;--color-text-primary:#2A2A2A;--color-text-secondary:#666;--color-accent:#8B6F47;--color-accent-hover:#7A6040;--color-border:#E5E5E3;--color-white:#FFF;--color-success:#2D8B4E;--color-upcoming:#95A5A6;--color-whatsapp:#25D366;--font-heading:'Cormorant Garamond',Georgia,serif;--font-body:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;--space-xs:.5rem;--space-sm:1rem;--space-md:1.5rem;--space-lg:2rem;--space-xl:3rem;--space-2xl:5rem;--container-max:1400px;--transition-fast:150ms ease;--transition-base:300ms ease;--transition-slow:500ms ease}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{font-size:16px;scroll-behavior:smooth}body{font-family:var(--font-body);font-size:1rem;line-height:1.6;color:var(--color-text-primary);background-color:var(--color-bg);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;padding-bottom:0}img{max-width:100%;height:auto;display:block}a{color:inherit;text-decoration:none;transition:color var(--transition-fast)}button{font-family:inherit;cursor:pointer;border:none;background:none}ul,ol{list-style:none}
+    h1,h2,h3{font-family:var(--font-heading);font-weight:400;line-height:1.2;color:var(--color-text-primary)}h1{font-size:clamp(2.5rem,5vw,4rem)}h2{font-size:clamp(2rem,4vw,3rem)}p{color:var(--color-text-secondary);max-width:65ch}
+    .container{width:100%;max-width:var(--container-max);margin:0 auto;padding:0 var(--space-md)}.section{padding:var(--space-2xl) 0}
+    .header{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--color-bg);border-bottom:1px solid var(--color-border);transition:transform var(--transition-base),box-shadow var(--transition-base)}.header__inner{display:flex;justify-content:space-between;align-items:center;height:80px}.header__logo{font-family:var(--font-heading);font-size:1.75rem;font-weight:500;letter-spacing:.02em}.header__logo span{color:var(--color-accent)}
+    .nav{display:none}.nav__list{display:flex;gap:var(--space-lg)}.nav__link{font-size:.875rem;letter-spacing:.05em;text-transform:uppercase;position:relative}
+    .menu-toggle{display:flex;flex-direction:column;justify-content:center;gap:6px;width:28px;height:28px;z-index:1001}.menu-toggle span{display:block;width:100%;height:1.5px;background:var(--color-text-primary);transition:transform var(--transition-base),opacity var(--transition-base)}
+    .mobile-nav{position:fixed;top:0;left:0;right:0;bottom:0;background:var(--color-bg);z-index:999;display:flex;flex-direction:column;justify-content:center;align-items:center;opacity:0;visibility:hidden;transition:opacity var(--transition-base),visibility var(--transition-base)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--space-xs);padding:1rem 2rem;font-size:.875rem;font-weight:500;letter-spacing:.05em;text-transform:uppercase;border-radius:0;transition:all var(--transition-base)}.btn--small{padding:.625rem 1.25rem;font-size:.8125rem}.btn--outline{background:transparent;border:1px solid var(--color-text-primary);color:var(--color-text-primary)}.btn--accent{background:var(--color-accent);color:var(--color-white)}
+    .visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+    .section-header{text-align:center;margin-bottom:var(--space-2xl)}.section-header__subtitle{font-size:.875rem;letter-spacing:.15em;text-transform:uppercase;color:var(--color-accent);margin-bottom:var(--space-sm)}.section-header__title{margin-bottom:var(--space-md)}.section-header__description{max-width:600px;margin:0 auto}
+    .artwork-grid{display:grid;grid-template-columns:1fr;gap:var(--space-lg)}.artwork-card{position:relative;cursor:pointer}.artwork-card__image{position:relative;aspect-ratio:1;overflow:hidden;background:var(--color-bg-alt)}.artwork-card__image img{width:100%;height:100%;object-fit:cover;transition:transform var(--transition-slow)}
+    @media(max-width:639px){body{padding-bottom:60px}}
+    @media(min-width:768px){.nav{display:block}.menu-toggle{display:none}.artwork-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(min-width:1024px){.artwork-grid{grid-template-columns:repeat(3,1fr)}}
+    @media(min-width:1200px){.artwork-grid{grid-template-columns:repeat(4,1fr)}}
+  </style>
+  <link rel="stylesheet" href="css/styles.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="css/styles.css"></noscript>
+
   <title>Colección | Lienzo Gallery</title>
 </head>
 <body>
@@ -75,7 +112,10 @@
             <a href="product-01.html" aria-label="Ver Las Chismosas">
               <div class="artwork-card__image">
                 <span class="artwork-card__status artwork-card__status--available"></span>
-                <img src="images/artworks/artwork-01.jpg" alt="Las Chismosas - Obra original por Dora" loading="lazy">
+                <picture>
+                  <source srcset="images/artworks/artwork-01.webp" type="image/webp">
+                  <img src="images/artworks/artwork-01.jpg" alt="Las Chismosas - Obra original por Dora" loading="lazy" decoding="async" width="841" height="658">
+                </picture>
                 <div class="artwork-card__overlay">
                   <span class="artwork-card__overlay-price">Original: $48,500 MXN</span>
                   <span class="artwork-card__overlay-prints">Prints desde: $850 MXN</span>
@@ -95,7 +135,10 @@
             <a href="product-02.html" aria-label="Ver El Cerro de la Silla en 1800">
               <div class="artwork-card__image">
                 <span class="artwork-card__status artwork-card__status--available"></span>
-                <img src="images/artworks/artwork-02.jpg" alt="El Cerro de la Silla en 1800 - Obra original por Dora" loading="lazy">
+                <picture>
+                  <source srcset="images/artworks/artwork-02.webp" type="image/webp">
+                  <img src="images/artworks/artwork-02.jpg" alt="El Cerro de la Silla en 1800 - Obra original por Dora" loading="lazy" decoding="async" width="1115" height="719">
+                </picture>
                 <div class="artwork-card__overlay">
                   <span class="artwork-card__overlay-price">Original: $35,000 MXN</span>
                   <span class="artwork-card__overlay-prints">Prints desde: $850 MXN</span>
@@ -115,7 +158,10 @@
             <a href="product-03.html" aria-label="Ver Cargando Flores Hacia el Mercado">
               <div class="artwork-card__image">
                 <span class="artwork-card__status artwork-card__status--available"></span>
-                <img src="images/artworks/artwork-03.jpg" alt="Cargando Flores Hacia el Mercado - Obra original por Dora" loading="lazy">
+                <picture>
+                  <source srcset="images/artworks/artwork-03.webp" type="image/webp">
+                  <img src="images/artworks/artwork-03.jpg" alt="Cargando Flores Hacia el Mercado - Obra original por Dora" loading="lazy" decoding="async" width="1200" height="1699">
+                </picture>
                 <div class="artwork-card__overlay">
                   <span class="artwork-card__overlay-price">Original: $55,000 MXN</span>
                   <span class="artwork-card__overlay-prints">Prints desde: $850 MXN</span>
@@ -135,7 +181,10 @@
             <a href="product-04.html" aria-label="Ver En el Patio de Mi Abuela">
               <div class="artwork-card__image">
                 <span class="artwork-card__status artwork-card__status--available"></span>
-                <img src="images/artworks/artwork-04.jpg" alt="En el Patio de Mi Abuela - Obra original por Dora" loading="lazy">
+                <picture>
+                  <source srcset="images/artworks/artwork-04.webp" type="image/webp">
+                  <img src="images/artworks/artwork-04.jpg" alt="En el Patio de Mi Abuela - Obra original por Dora" loading="lazy" decoding="async" width="1200" height="1514">
+                </picture>
                 <div class="artwork-card__overlay">
                   <span class="artwork-card__overlay-price">Original: $42,000 MXN</span>
                   <span class="artwork-card__overlay-prints">Prints desde: $850 MXN</span>
@@ -154,7 +203,7 @@
           <article class="artwork-card artwork-card--upcoming" data-status="proximamente" data-price="0" data-date="2025-01">
             <div class="artwork-card__image">
               <span class="artwork-card__status artwork-card__status--upcoming"></span>
-              <img src="images/artworks/artwork-05.svg" alt="Próximamente - Nueva obra" loading="lazy">
+              <img src="images/artworks/artwork-05.svg" alt="Próximamente - Nueva obra" loading="lazy" decoding="async" width="400" height="400">
               <div class="artwork-card__overlay artwork-card__overlay--upcoming">
                 <span class="artwork-card__overlay-soon">Próximamente</span>
                 <button class="btn btn--small btn--accent artwork-card__notify" data-artwork="Obra 05">Avísame</button>
@@ -169,7 +218,7 @@
           <article class="artwork-card artwork-card--upcoming" data-status="proximamente" data-price="0" data-date="2025-02">
             <div class="artwork-card__image">
               <span class="artwork-card__status artwork-card__status--upcoming"></span>
-              <img src="images/artworks/artwork-06.svg" alt="Próximamente - Nueva obra" loading="lazy">
+              <img src="images/artworks/artwork-06.svg" alt="Próximamente - Nueva obra" loading="lazy" decoding="async" width="400" height="400">
               <div class="artwork-card__overlay artwork-card__overlay--upcoming">
                 <span class="artwork-card__overlay-soon">Próximamente</span>
                 <button class="btn btn--small btn--accent artwork-card__notify" data-artwork="Obra 06">Avísame</button>
@@ -184,7 +233,7 @@
           <article class="artwork-card artwork-card--upcoming" data-status="proximamente" data-price="0" data-date="2025-03">
             <div class="artwork-card__image">
               <span class="artwork-card__status artwork-card__status--upcoming"></span>
-              <img src="images/artworks/artwork-07.svg" alt="Próximamente - Nueva obra" loading="lazy">
+              <img src="images/artworks/artwork-07.svg" alt="Próximamente - Nueva obra" loading="lazy" decoding="async" width="400" height="400">
               <div class="artwork-card__overlay artwork-card__overlay--upcoming">
                 <span class="artwork-card__overlay-soon">Próximamente</span>
                 <button class="btn btn--small btn--accent artwork-card__notify" data-artwork="Obra 07">Avísame</button>
@@ -199,7 +248,7 @@
           <article class="artwork-card artwork-card--upcoming" data-status="proximamente" data-price="0" data-date="2025-04">
             <div class="artwork-card__image">
               <span class="artwork-card__status artwork-card__status--upcoming"></span>
-              <img src="images/artworks/artwork-08.svg" alt="Próximamente - Nueva obra" loading="lazy">
+              <img src="images/artworks/artwork-08.svg" alt="Próximamente - Nueva obra" loading="lazy" decoding="async" width="400" height="400">
               <div class="artwork-card__overlay artwork-card__overlay--upcoming">
                 <span class="artwork-card__overlay-soon">Próximamente</span>
                 <button class="btn btn--small btn--accent artwork-card__notify" data-artwork="Obra 08">Avísame</button>
@@ -214,7 +263,7 @@
           <article class="artwork-card artwork-card--upcoming" data-status="proximamente" data-price="0" data-date="2025-05">
             <div class="artwork-card__image">
               <span class="artwork-card__status artwork-card__status--upcoming"></span>
-              <img src="images/artworks/artwork-09.svg" alt="Próximamente - Nueva obra" loading="lazy">
+              <img src="images/artworks/artwork-09.svg" alt="Próximamente - Nueva obra" loading="lazy" decoding="async" width="400" height="400">
               <div class="artwork-card__overlay artwork-card__overlay--upcoming">
                 <span class="artwork-card__overlay-soon">Próximamente</span>
                 <button class="btn btn--small btn--accent artwork-card__notify" data-artwork="Obra 09">Avísame</button>
@@ -229,7 +278,7 @@
           <article class="artwork-card artwork-card--upcoming" data-status="proximamente" data-price="0" data-date="2025-06">
             <div class="artwork-card__image">
               <span class="artwork-card__status artwork-card__status--upcoming"></span>
-              <img src="images/artworks/artwork-10.svg" alt="Próximamente - Nueva obra" loading="lazy">
+              <img src="images/artworks/artwork-10.svg" alt="Próximamente - Nueva obra" loading="lazy" decoding="async" width="400" height="400">
               <div class="artwork-card__overlay artwork-card__overlay--upcoming">
                 <span class="artwork-card__overlay-soon">Próximamente</span>
                 <button class="btn btn--small btn--accent artwork-card__notify" data-artwork="Obra 10">Avísame</button>
@@ -244,7 +293,7 @@
           <article class="artwork-card artwork-card--upcoming" data-status="proximamente" data-price="0" data-date="2025-07">
             <div class="artwork-card__image">
               <span class="artwork-card__status artwork-card__status--upcoming"></span>
-              <img src="images/artworks/artwork-11.svg" alt="Próximamente - Nueva obra" loading="lazy">
+              <img src="images/artworks/artwork-11.svg" alt="Próximamente - Nueva obra" loading="lazy" decoding="async" width="400" height="400">
               <div class="artwork-card__overlay artwork-card__overlay--upcoming">
                 <span class="artwork-card__overlay-soon">Próximamente</span>
                 <button class="btn btn--small btn--accent artwork-card__notify" data-artwork="Obra 11">Avísame</button>
@@ -259,7 +308,7 @@
           <article class="artwork-card artwork-card--upcoming" data-status="proximamente" data-price="0" data-date="2025-08">
             <div class="artwork-card__image">
               <span class="artwork-card__status artwork-card__status--upcoming"></span>
-              <img src="images/artworks/artwork-12.svg" alt="Próximamente - Nueva obra" loading="lazy">
+              <img src="images/artworks/artwork-12.svg" alt="Próximamente - Nueva obra" loading="lazy" decoding="async" width="400" height="400">
               <div class="artwork-card__overlay artwork-card__overlay--upcoming">
                 <span class="artwork-card__overlay-soon">Próximamente</span>
                 <button class="btn btn--small btn--accent artwork-card__notify" data-artwork="Obra 12">Avísame</button>

@@ -4,11 +4,185 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Cargando Flores Hacia el Mercado - Obra original de Dora. Disponible como obra única o impresión giclée de museo en edición limitada.">
+
+  <!-- OG / Twitter -->
+  <meta property="og:title" content="Cargando Flores Hacia el Mercado | Lienzo Gallery">
+  <meta property="og:description" content="Cargando Flores Hacia el Mercado - Obra original de Dora. Disponible como obra única o impresión giclée de museo en edición limitada.">
+  <meta property="og:image" content="https://fevaldez.github.io/lienzo-gallery/images/artworks/artwork-03.jpg">
+  <meta property="og:url" content="https://fevaldez.github.io/lienzo-gallery/product-03.html">
+  <meta property="og:type" content="product">
+  <meta property="og:site_name" content="Lienzo Gallery">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cargando Flores Hacia el Mercado | Lienzo Gallery">
+  <meta name="twitter:description" content="Cargando Flores Hacia el Mercado - Obra original de Dora. Disponible como obra única o impresión giclée de museo en edición limitada.">
+  <meta name="twitter:image" content="https://fevaldez.github.io/lienzo-gallery/images/artworks/artwork-03.jpg">
+
+  <link rel="canonical" href="https://fevaldez.github.io/lienzo-gallery/product-03.html">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="dns-prefetch" href="https://wa.me">
+
+  <!-- Preload main product image -->
+  <link rel="preload" as="image" type="image/webp" href="images/artworks/artwork-03.webp">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Critical CSS -->
+  <style>
+    :root {
+      --color-bg: #FAFAF8;
+      --color-bg-alt: #F5F5F3;
+      --color-text-primary: #2A2A2A;
+      --color-text-secondary: #666666;
+      --color-accent: #8B6F47;
+      --color-accent-hover: #7A6040;
+      --color-border: #E5E5E3;
+      --color-white: #FFFFFF;
+      --color-success: #2D8B4E;
+      --color-sold: #C0392B;
+      --color-upcoming: #95A5A6;
+      --color-whatsapp: #25D366;
+      --font-heading: 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --space-xs: 0.5rem;
+      --space-sm: 1rem;
+      --space-md: 1.5rem;
+      --space-lg: 2rem;
+      --space-xl: 3rem;
+      --space-2xl: 5rem;
+      --space-3xl: 8rem;
+      --container-max: 1400px;
+      --container-narrow: 900px;
+      --transition-fast: 150ms ease;
+      --transition-base: 300ms ease;
+      --transition-slow: 500ms ease;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body); font-size: 1rem; line-height: 1.6;
+      color: var(--color-text-primary); background-color: var(--color-bg);
+      -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+      padding-bottom: 0;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; transition: color var(--transition-fast); }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; }
+    ul, ol { list-style: none; }
+    h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); font-weight: 400; line-height: 1.2; color: var(--color-text-primary); }
+    h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
+    h2 { font-size: clamp(2rem, 4vw, 3rem); }
+    h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+    p { color: var(--color-text-secondary); max-width: 65ch; }
+    .container { width: 100%; max-width: var(--container-max); margin: 0 auto; padding: 0 var(--space-md); }
+    .section { padding: var(--space-2xl) 0; }
+    .header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      background: var(--color-bg); border-bottom: 1px solid var(--color-border);
+      transition: transform var(--transition-base), box-shadow var(--transition-base);
+    }
+    .header--hidden { transform: translateY(-100%); }
+    .header--scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.05); }
+    .header__inner { display: flex; justify-content: space-between; align-items: center; height: 80px; }
+    .header__logo { font-family: var(--font-heading); font-size: 1.75rem; font-weight: 500; letter-spacing: 0.02em; }
+    .header__logo span { color: var(--color-accent); }
+    .nav { display: none; }
+    .nav__list { display: flex; gap: var(--space-lg); }
+    .nav__link { font-size: 0.875rem; letter-spacing: 0.05em; text-transform: uppercase; position: relative; }
+    .nav__link::after {
+      content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1px;
+      background: var(--color-accent); transition: width var(--transition-base);
+    }
+    .nav__link:hover::after, .nav__link--active::after { width: 100%; }
+    .menu-toggle {
+      display: flex; flex-direction: column; justify-content: center; gap: 6px;
+      width: 28px; height: 28px; z-index: 1001;
+    }
+    .menu-toggle span {
+      display: block; width: 100%; height: 1.5px; background: var(--color-text-primary);
+      transition: transform var(--transition-base), opacity var(--transition-base);
+    }
+    .mobile-nav {
+      position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--color-bg);
+      z-index: 999; display: flex; flex-direction: column; justify-content: center; align-items: center;
+      opacity: 0; visibility: hidden; transition: opacity var(--transition-base), visibility var(--transition-base);
+    }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: var(--space-xs);
+      padding: 1rem 2rem; font-size: 0.875rem; font-weight: 500; letter-spacing: 0.05em;
+      text-transform: uppercase; border-radius: 0; transition: all var(--transition-base);
+    }
+    .visually-hidden {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0,0,0,0); border: 0;
+    }
+    .product { padding-top: calc(80px + var(--space-xl)); }
+    .product__grid { display: grid; gap: var(--space-xl); }
+    .product__gallery { position: relative; }
+    .product__main-image-wrapper {
+      width: 100%; display: flex; justify-content: center; align-items: center;
+      background: var(--color-bg-alt); min-height: 300px; max-height: 80vh;
+      padding: var(--space-md); margin-bottom: var(--space-md);
+    }
+    img.product__main-image {
+      width: auto; height: auto; max-width: 100%; max-height: 80vh;
+      object-fit: contain; display: block; margin: 0 auto; cursor: zoom-in;
+    }
+    .product__details { padding: var(--space-md) 0; }
+    .product__title { margin-bottom: var(--space-md); }
+    .breadcrumb a { color: var(--color-accent); }
+    @media (max-width: 639px) {
+      .product__main-image-wrapper { min-height: 200px; padding: var(--space-sm); }
+    }
+    @media (min-width: 768px) {
+      .nav { display: block; }
+      .menu-toggle { display: none; }
+      .product__grid { grid-template-columns: 1fr 1fr; gap: var(--space-2xl); }
+    }
+    @media (min-width: 1024px) {
+      .product__main-image-wrapper { max-height: 90vh; }
+      img.product__main-image { max-height: 90vh; }
+    }
+  </style>
+
+  <!-- Full stylesheet (async) -->
+  <link rel="preload" href="css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/styles.css"></noscript>
+
   <title>Cargando Flores Hacia el Mercado | Lienzo Gallery</title>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Cargando Flores Hacia el Mercado",
+      "image": "https://fevaldez.github.io/lienzo-gallery/images/artworks/artwork-03.jpg",
+      "description": "Cargando Flores Hacia el Mercado - Obra original de Dora. Disponible como obra única o impresión giclée de museo en edición limitada.",
+      "brand": { "@type": "Brand", "name": "Lienzo Gallery" },
+      "creator": { "@type": "Person", "name": "Dora Martínez" },
+      "offers": {
+        "@type": "Offer",
+        "price": "55000",
+        "priceCurrency": "MXN",
+        "availability": "https://schema.org/InStock",
+        "url": "https://fevaldez.github.io/lienzo-gallery/product-03.html"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://fevaldez.github.io/lienzo-gallery/" },
+        { "@type": "ListItem", "position": 2, "name": "Colección", "item": "https://fevaldez.github.io/lienzo-gallery/gallery.html" },
+        { "@type": "ListItem", "position": 3, "name": "Cargando Flores Hacia el Mercado" }
+      ]
+    }
+  ]
+  </script>
 </head>
 <body>
   <a href="#main-content" class="visually-hidden">Ir al contenido principal</a>
@@ -64,10 +238,16 @@
         <div class="product__grid">
           <div class="product__gallery">
             <div class="product__main-image-wrapper">
-              <img src="images/artworks/artwork-03.jpg"
-                   alt="Cargando Flores Hacia el Mercado - Acrílico por Dora"
-                   class="product__main-image product__zoom-trigger"
-                   id="main-image">
+              <picture>
+                <source srcset="images/artworks/artwork-03.webp" type="image/webp">
+                <img src="images/artworks/artwork-03.jpg"
+                     alt="Cargando Flores Hacia el Mercado - Acrílico por Dora"
+                     class="product__main-image product__zoom-trigger"
+                     id="main-image"
+                     fetchpriority="high"
+                     width="1200"
+                     height="1699">
+              </picture>
             </div>
           </div>
 
@@ -186,7 +366,12 @@
         <div class="artwork-grid">
           <article class="artwork-card" data-status="disponible">
             <a href="product-01.html" aria-label="Ver Las Chismosas">
-              <div class="artwork-card__image"><img src="images/artworks/artwork-01.jpg" alt="Las Chismosas" loading="lazy"></div>
+              <div class="artwork-card__image">
+                <picture>
+                  <source srcset="images/artworks/artwork-01.webp" type="image/webp">
+                  <img src="images/artworks/artwork-01.jpg" alt="Las Chismosas" loading="lazy" decoding="async" width="841" height="658">
+                </picture>
+              </div>
               <div class="artwork-card__info">
                 <h3 class="artwork-card__title">Las Chismosas</h3>
                 <p class="artwork-card__meta">60 × 90 cm | Óleo</p>
@@ -196,7 +381,12 @@
           </article>
           <article class="artwork-card" data-status="disponible">
             <a href="product-02.html" aria-label="Ver El Cerro de la Silla en 1800">
-              <div class="artwork-card__image"><img src="images/artworks/artwork-02.jpg" alt="El Cerro de la Silla en 1800" loading="lazy"></div>
+              <div class="artwork-card__image">
+                <picture>
+                  <source srcset="images/artworks/artwork-02.webp" type="image/webp">
+                  <img src="images/artworks/artwork-02.jpg" alt="El Cerro de la Silla en 1800" loading="lazy" decoding="async" width="1115" height="719">
+                </picture>
+              </div>
               <div class="artwork-card__info">
                 <h3 class="artwork-card__title">El Cerro de la Silla en 1800</h3>
                 <p class="artwork-card__meta">45 × 30 cm | Pastel</p>
@@ -206,7 +396,12 @@
           </article>
           <article class="artwork-card" data-status="disponible">
             <a href="product-04.html" aria-label="Ver En el Patio de Mi Abuela">
-              <div class="artwork-card__image"><img src="images/artworks/artwork-04.jpg" alt="En el Patio de Mi Abuela" loading="lazy"></div>
+              <div class="artwork-card__image">
+                <picture>
+                  <source srcset="images/artworks/artwork-04.webp" type="image/webp">
+                  <img src="images/artworks/artwork-04.jpg" alt="En el Patio de Mi Abuela" loading="lazy" decoding="async" width="1200" height="1514">
+                </picture>
+              </div>
               <div class="artwork-card__info">
                 <h3 class="artwork-card__title">En el Patio de Mi Abuela</h3>
                 <p class="artwork-card__meta">30 × 40 cm | Pastel</p>
