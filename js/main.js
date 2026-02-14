@@ -622,6 +622,29 @@
         });
       });
     }
+
+    // Add to cart button (original tab)
+    const addOrigBtn = document.getElementById('add-to-cart-original');
+    if (addOrigBtn) {
+      addOrigBtn.addEventListener('click', () => {
+        const productSection = document.querySelector('.product[data-title]');
+        if (!productSection) return;
+        const title = productSection.dataset.title;
+        const price = parseInt(productSection.dataset.originalPrice);
+        const technique = productSection.dataset.technique;
+        const dimensions = productSection.dataset.dimensions;
+        const mainImg = document.getElementById('main-image');
+        const image = mainImg ? (mainImg.currentSrc || mainImg.src) : '';
+        addToCart({
+          title: title,
+          size: 'original',
+          printType: 'original',
+          meta: technique + ' · ' + dimensions,
+          price: price,
+          image: image
+        });
+      });
+    }
   }
 
   function showToast(message) {
