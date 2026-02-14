@@ -446,10 +446,204 @@
     setTimeout(() => el.remove(), 1000);
   }
 
+  // ========== Shopping Cart ==========
+  const CART_KEY = 'lienzo_cart';
+
+  function getCart() {
+    try { return JSON.parse(localStorage.getItem(CART_KEY)) || []; }
+    catch { return []; }
+  }
+
+  function saveCart(cart) {
+    localStorage.setItem(CART_KEY, JSON.stringify(cart));
+    updateCartCount();
+  }
+
+  function addToCart(item) {
+    const cart = getCart();
+    // Check for duplicate (same title + size + type)
+    const existing = cart.findIndex(c =>
+      c.title === item.title && c.size === item.size && c.printType === item.printType
+    );
+    if (existing >= 0) {
+      cart[existing].quantity = (cart[existing].quantity || 1) + 1;
+    } else {
+      item.quantity = 1;
+      cart.push(item);
+    }
+    saveCart(cart);
+    showToast('Agregado al carrito');
+    renderCartItems();
+  }
+
+  function removeFromCart(index) {
+    const cart = getCart();
+    cart.splice(index, 1);
+    saveCart(cart);
+    renderCartItems();
+  }
+
+  function updateCartCount() {
+    const countEl = document.getElementById('cart-count');
+    if (!countEl) return;
+    const cart = getCart();
+    const total = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+    if (total > 0) {
+      countEl.textContent = total;
+      countEl.hidden = false;
+    } else {
+      countEl.hidden = true;
+    }
+  }
+
+  function renderCartItems() {
+    const container = document.getElementById('cart-items');
+    if (!container) return;
+    const cart = getCart();
+    const footer = document.getElementById('cart-footer');
+    const emptyState = document.getElementById('cart-empty');
+
+    if (cart.length === 0) {
+      container.innerHTML = '';
+      if (emptyState) emptyState.hidden = false;
+      if (footer) footer.hidden = true;
+      return;
+    }
+
+    if (emptyState) emptyState.hidden = true;
+    if (footer) footer.hidden = false;
+
+    let total = 0;
+    container.innerHTML = cart.map((item, i) => {
+      const subtotal = item.price * (item.quantity || 1);
+      total += subtotal;
+      return `
+        <div class="cart-item">
+          <div class="cart-item__image">
+            <img src="${item.image}" alt="${item.title}" loading="lazy">
+          </div>
+          <div class="cart-item__details">
+            <p class="cart-item__title">${item.title}</p>
+            <p class="cart-item__meta">${item.meta}${item.quantity > 1 ? ' × ' + item.quantity : ''}</p>
+            <p class="cart-item__price">$${subtotal.toLocaleString('es-MX')} MXN</p>
+            <button class="cart-item__remove" data-index="${i}">Eliminar</button>
+          </div>
+        </div>`;
+    }).join('');
+
+    const totalEl = document.getElementById('cart-total');
+    if (totalEl) totalEl.textContent = '$' + total.toLocaleString('es-MX') + ' MXN';
+
+    // WhatsApp checkout link
+    const checkoutLink = document.getElementById('cart-checkout');
+    if (checkoutLink) {
+      const msg = 'Hola, me interesa comprar:\n\n' +
+        cart.map(item => {
+          const sub = item.price * (item.quantity || 1);
+          return `• ${item.title} - ${item.meta}${item.quantity > 1 ? ' (×' + item.quantity + ')' : ''} - $${sub.toLocaleString('es-MX')} MXN`;
+        }).join('\n') +
+        '\n\nTotal: $' + total.toLocaleString('es-MX') + ' MXN';
+      checkoutLink.href = 'https://wa.me/521XXXXXXXXXX?text=' + encodeURIComponent(msg);
+    }
+
+    // Remove buttons
+    container.querySelectorAll('.cart-item__remove').forEach(btn => {
+      btn.addEventListener('click', () => removeFromCart(parseInt(btn.dataset.index)));
+    });
+  }
+
+  function setupCart() {
+    updateCartCount();
+
+    // Cart toggle
+    const toggle = document.getElementById('cart-toggle');
+    const drawer = document.getElementById('cart-drawer');
+    const backdrop = document.getElementById('cart-backdrop');
+    if (!toggle || !drawer) return;
+
+    function openCart() {
+      drawer.classList.add('cart-drawer--active');
+      if (backdrop) backdrop.classList.add('cart-backdrop--active');
+      document.body.style.overflow = 'hidden';
+      renderCartItems();
+    }
+
+    function closeCart() {
+      drawer.classList.remove('cart-drawer--active');
+      if (backdrop) backdrop.classList.remove('cart-backdrop--active');
+      document.body.style.overflow = '';
+    }
+
+    toggle.addEventListener('click', openCart);
+    if (backdrop) backdrop.addEventListener('click', closeCart);
+
+    const closeBtn = document.getElementById('cart-close');
+    if (closeBtn) closeBtn.addEventListener('click', closeCart);
+
+    const continueBtn = document.getElementById('cart-continue');
+    if (continueBtn) continueBtn.addEventListener('click', closeCart);
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && drawer.classList.contains('cart-drawer--active')) closeCart();
+    });
+
+    // Add to cart button (prints tab)
+    const addBtn = document.getElementById('add-to-cart');
+    if (addBtn) {
+      addBtn.addEventListener('click', () => {
+        const productSection = document.querySelector('.product[data-title]');
+        if (!productSection) return;
+
+        const title = productSection.dataset.title;
+        const sizeInput = document.querySelector('input[name="print-size"]:checked');
+        const typeInput = document.querySelector('input[name="print-type"]:checked');
+        if (!sizeInput) return;
+
+        const sizeLabel = sizeInput.closest('.print-selector__option').querySelector('.print-selector__label span:first-child');
+        const typeLabel = typeInput ? typeInput.closest('.print-selector__option').querySelector('.print-selector__label span:first-child') : null;
+
+        let price = parseInt(sizeInput.dataset.price);
+        const multiplier = typeInput ? parseFloat(typeInput.dataset.multiplier || 1) : 1;
+        price = Math.round(price * multiplier);
+
+        const mainImg = document.getElementById('main-image');
+        const image = mainImg ? (mainImg.currentSrc || mainImg.src) : '';
+
+        const sizeName = sizeLabel ? sizeLabel.textContent : sizeInput.value.toUpperCase();
+        const typeName = typeLabel ? typeLabel.textContent : 'Giclée';
+
+        addToCart({
+          title: title,
+          size: sizeInput.value,
+          printType: typeInput ? typeInput.value : 'standard',
+          meta: sizeName + ' · ' + typeName,
+          price: price,
+          image: image
+        });
+      });
+    }
+  }
+
+  function showToast(message) {
+    let toast = document.querySelector('.toast');
+    if (!toast) {
+      toast = document.createElement('div');
+      toast.className = 'toast';
+      document.body.appendChild(toast);
+    }
+    toast.textContent = message;
+    toast.classList.remove('toast--visible');
+    // Force reflow
+    void toast.offsetWidth;
+    toast.classList.add('toast--visible');
+    setTimeout(() => toast.classList.remove('toast--visible'), 2000);
+  }
+
   // Init
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
+    document.addEventListener('DOMContentLoaded', () => { init(); setupCart(); });
   } else {
     init();
+    setupCart();
   }
 })();
