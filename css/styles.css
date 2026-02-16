@@ -628,11 +628,12 @@ img.product__main-image {
   100% { transform: scale(1); }
 }
 
-/* Back Button (product pages) */
+/* Back Button (product pages) — mobile only */
 .product__back {
   display: inline-flex; align-items: center; gap: 0.5rem;
   font-size: 0.875rem; color: var(--color-text-secondary);
-  transition: color var(--transition-fast); margin-bottom: var(--space-sm);
+  padding: 0.5rem 0; min-height: 44px;
+  transition: color var(--transition-fast);
 }
 .product__back:hover { color: var(--color-accent); }
 .product__back svg { transition: transform var(--transition-fast); }
@@ -741,12 +742,19 @@ img.product__main-image {
 }
 .toast--visible { opacity: 1; transform: translateX(-50%) translateY(0); }
 
-/* Breadcrumb Enhancement */
-.breadcrumb { font-size: 0.8125rem; color: var(--color-text-secondary); }
-.breadcrumb nav { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+/* Breadcrumb & Navigation — responsive */
+.breadcrumb { padding-top: calc(80px + var(--space-md)); font-size: 0.8125rem; color: var(--color-text-secondary); }
+.breadcrumb nav[aria-label="Breadcrumb"] { display: none; }
 .breadcrumb a { color: var(--color-accent); transition: color var(--transition-fast); }
 .breadcrumb a:hover { color: var(--color-accent-hover); text-decoration: underline; }
 .breadcrumb span { color: var(--color-text-secondary); }
+
+/* Desktop: show breadcrumb and back button */
+@media (min-width: 768px) {
+  .breadcrumb nav[aria-label="Breadcrumb"] { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+  .product__back { font-size: 0.8125rem; }
+  .product__back svg { width: 18px; height: 18px; }
+}
 
 /* Policies Page */
 .policies { padding-top: calc(80px + var(--space-xl)); }
