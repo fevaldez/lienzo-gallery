@@ -136,11 +136,13 @@
     }
     .product__details { padding: var(--space-md) 0; }
     .product__title { margin-bottom: var(--space-md); }
-    .breadcrumb { padding-top: calc(80px + var(--space-md)); }
-    .breadcrumb nav[aria-label="Breadcrumb"] { display: none; }
+    .breadcrumb { padding-top: calc(80px + var(--space-md)); display: none; }
     .breadcrumb a { color: var(--color-accent); }
+    .header__back { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; flex-shrink: 0; }
     @media (min-width: 768px) {
+      .breadcrumb { display: block; }
       .breadcrumb nav[aria-label="Breadcrumb"] { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+      .header__back { display: none; }
     }
     @media (max-width: 639px) {
       .product__main-image-wrapper { min-height: 200px; padding: var(--space-sm); }
@@ -199,6 +201,9 @@
   <header class="header" role="banner">
     <div class="container">
       <div class="header__inner">
+        <a href="gallery.html" class="header__back" aria-label="Volver a la colección">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        </a>
         <a href="index.html" class="header__logo" aria-label="Lienzo - Inicio">Lienzo<span>.</span></a>
         <nav class="nav" role="navigation" aria-label="Navegación principal">
           <ul class="nav__list">
