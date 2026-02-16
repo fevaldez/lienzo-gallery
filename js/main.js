@@ -78,6 +78,13 @@
   function handleHeaderScroll() {
     const currentScrollY = window.scrollY;
     header.classList.toggle('header--scrolled', currentScrollY > 10);
+    if (window.innerWidth >= 768) {
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        header.classList.add('header--hidden');
+      } else {
+        header.classList.remove('header--hidden');
+      }
+    }
     lastScrollY = currentScrollY;
   }
 
