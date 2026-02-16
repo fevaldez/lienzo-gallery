@@ -743,7 +743,12 @@ img.product__main-image {
 .toast--visible { opacity: 1; transform: translateX(-50%) translateY(0); }
 
 /* Breadcrumb & Navigation — responsive */
-.breadcrumb { padding-top: calc(80px + var(--space-md)); font-size: 0.8125rem; color: var(--color-text-secondary); }
+.breadcrumb {
+  margin-top: 80px; font-size: 0.8125rem; color: var(--color-text-secondary);
+  position: sticky; top: 80px; z-index: 999; background: var(--color-bg);
+  padding: var(--space-md) 0 var(--space-sm);
+}
+.header--hidden ~ main .breadcrumb { top: 0; }
 .breadcrumb nav[aria-label="Breadcrumb"] { display: none; }
 .breadcrumb a { color: var(--color-accent); transition: color var(--transition-fast); }
 .breadcrumb a:hover { color: var(--color-accent-hover); text-decoration: underline; }
